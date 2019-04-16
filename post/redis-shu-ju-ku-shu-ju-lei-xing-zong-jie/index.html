@@ -3,8 +3,8 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
-<link rel="shortcut icon" href="https://Elmusk.github.io/favicon.ico?v=1555340696008">
+<title>Redis数据库数据类型总结 | Gridea</title>
+<link rel="shortcut icon" href="https://Elmusk.github.io/favicon.ico?v=1555377082127">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://Elmusk.github.io/styles/main.css">
 
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://Elmusk.github.io">
-  <img class="avatar" src="https://Elmusk.github.io/images/avatar.png?v=1555340696008" alt="">
+  <img class="avatar" src="https://Elmusk.github.io/images/avatar.png?v=1555377082127" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -72,22 +72,44 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              Redis数据库数据类型总结
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2019-04-16 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <p>主要记录一下Redis数据库(以key,value形式存储数据)中的五种数据类型：string(字符串)、hash(哈希）、list(列表）、set(集合)、zset(有序集合)；会周期性的把更新的数据写入到磁盘或者把修改操作写入追加的记录文件。</p>
+<!-- more -->
+<h3 id="string类型">String类型</h3>
+<ul>
+<li>字符串类型是Redis中最为基础的数据存储类型，是二进制安全的(该类型可以接受任何格式的数据)，是标准的key-value。</li>
+<li>应用场景：统计网站访问数量、当前在线人数等。
+<img src="https://Elmusk.github.io/post-images/1555377031106.png" alt=""></li>
+</ul>
+<h3 id="散列hash">散列hash</h3>
+<ul>
+<li>Redis中的散列可以看成具有String key和String value的map容器，可以将多个key-value存储到一个key中。</li>
+<li>应用场景：如存储、读取、修改用户属性（name, age, pwd等）
+<img src="https://Elmusk.github.io/post-images/1555376859645.png" alt=""></li>
+</ul>
 
             </div>
           </article>
         </div>
     
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Elmusk.github.io/post/hello-gridea">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>  
         
 
         
